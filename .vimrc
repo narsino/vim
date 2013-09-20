@@ -89,6 +89,7 @@ augroup END
 augroup filetype_asm
     autocmd!
     autocmd FileType asm nnoremap <buffer> <localleader>c I// <esc>
+    autocmd FileType asm setlocal foldmethod=indent
 augroup END
 "}}}
 
