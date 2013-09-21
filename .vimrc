@@ -4,7 +4,7 @@ colorscheme default
     autocmd FileType markdown onoremap <buffer> ah :<c-u>execute "normal! ?\\(^==\\+\\)\\\|\\(^--\\+\\)$\r:nohlsearch\rg_vk0"<cr> 
 let mapleader = " "
 let maplocalleader = "\\"
-set foldlevelstart=0
+set wildmenu
 set tw=80
 set expandtab
 set softtabstop=4
@@ -27,6 +27,7 @@ nnoremap <c-u> viwU
 "set iskeyword+=_
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>pb :execute "rightbelow vsplit " . bufname('#')<cr>
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
@@ -104,6 +105,7 @@ augroup END
 "Status line settings ---------------------{{{
 "status line customization
 set statusline=%f
+set statusline+=%M
 set statusline+=%=
 set statusline+=%l
 set statusline+=/
