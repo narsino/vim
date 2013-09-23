@@ -1,7 +1,6 @@
 
 "Basic settings---------------------{{{
 colorscheme default
-    autocmd FileType markdown onoremap <buffer> ah :<c-u>execute "normal! ?\\(^==\\+\\)\\\|\\(^--\\+\\)$\r:nohlsearch\rg_vk0"<cr> 
 let mapleader = " "
 let maplocalleader = "\\"
 set wildmenu
