@@ -12,7 +12,7 @@ set shiftwidth=4
 set ruler
 set ic
 set smartcase
-set hlsearch
+set hlsearch incsearch
 set spell
 set nu
 set wrap
