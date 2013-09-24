@@ -12,7 +12,6 @@ set ruler
 set ic
 set smartcase
 set hlsearch incsearch
-set spell
 set nu
 set wrap
 set shiftround
@@ -51,7 +50,7 @@ inoremap <esc> <nop>
 " and the new position.
 
 onoremap p i(
-onoremap b /return<cr>
+"onoremap b /return<cr>
 onoremap in( :<c-u>normal! f(vi)<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
 onoremap an( :<c-u>normal! f(va)<cr>
