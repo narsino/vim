@@ -74,6 +74,7 @@ augroup filetype_python
     autocmd FileType python :iabbrev <buffer> iff if:<left> 
     autocmd FileType python :iabbrev <buffer> deff def:<left> 
     autocmd FileType python setlocal foldmethod=indent
+    autocmd FileType vim setlocal nospell
 augroup END
 "}}}
 
@@ -90,6 +91,7 @@ augroup filetype_asm
     autocmd!
     autocmd FileType asm nnoremap <buffer> <localleader>c I// <esc>
     autocmd FileType asm setlocal foldmethod=indent
+    autocmd FileType vim setlocal nospell
 augroup END
 "}}}
 
@@ -98,6 +100,7 @@ augroup END
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker 
+    autocmd FileType vim setlocal nospell
 augroup END
 "}}}
 
