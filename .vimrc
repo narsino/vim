@@ -28,11 +28,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>pb :execute "rightbelow vsplit " . bufname('#')<cr>
 iabbrev adn and
 iabbrev waht what
-iabbrev tehn then
+iabbrev tehn then   
 iabbrev hdr <cr>Narsi Gangishetti<cr>Jawbone Corp.<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>'<i"<esc>'>$a"
+nnoremap <leader>w :execute "match ErrorMsg " . '/\v( )+$/'<cr>
+nnoremap <leader>W :execute "match None"<cr>
 nnoremap <leader>H 0w
 inoremap jk <esc>
 inoremap <esc> <nop>
