@@ -32,6 +32,8 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>'<i"<esc>'>$a"
 nnoremap <leader>w :execute "match ErrorMsg " . '/\v( )+$/'<cr>
 nnoremap <leader>W :execute "match None"<cr>
+nnoremap <leader>n :cnext<cr>
+nnoremap <leader>p :cprevious<cr>
 nnoremap <leader>H 0w
 inoremap jk <esc>
 inoremap <esc> <nop>
