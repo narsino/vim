@@ -45,6 +45,12 @@ set hlsearch incsearch
 nnoremap <leader>s :nohlsearch<cr>
 "}}}
 
+"grep settings---------------------{{{
+:nnoremap <leader>g :silent :execute "grep! -R " . shellescape(expand('<cWORD>')) . " ."<cr>:copen<cr>
+:nnoremap <leader>G :silent :execute "grep! -R " . shellescape(expand('<cword>')) . " ."<cr>
+
+"}}}
+
 "Operator pending settings ---------------------{{{
 "operator-pending mapping
 "1. Start at the cursor position. 
