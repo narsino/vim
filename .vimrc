@@ -48,8 +48,8 @@ nnoremap <leader>s :nohlsearch<cr>
 "}}}
 
 "grep settings---------------------{{{
-:nnoremap <leader>g :silent :execute "grep! -R " . shellescape(expand('<cWORD>')) . " ."<cr>:copen<cr>
-:nnoremap <leader>G :silent :execute "grep! -R " . shellescape(expand('<cword>')) . " ."<cr>
+:nnoremap <leader>g :silent :execute "grep! -R " . shellescape(expand('<cWORD>')) . " ."<cr>:copen 20<cr>
+:nnoremap <leader>G :silent :execute "grep! -R " . shellescape(expand('<cword>')) . " ."<cr>:copen 20<cr>
 
 "}}}
 
