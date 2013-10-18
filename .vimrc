@@ -1,5 +1,7 @@
 
 "Basic settings---------------------{{{
+call pathogen#infect()
+filetype on
 colorscheme default
 let mapleader = " "
 let maplocalleader = "\\"
@@ -23,6 +25,7 @@ nnoremap <c-u> viwU
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>pb :execute "rightbelow vsplit " . bufname('#')<cr>
+vnoremap <leader>cp xPP
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then   
@@ -30,12 +33,19 @@ iabbrev hdr <cr>Narsi Gangishetti<cr>Jawbone Corp.<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 vnoremap <leader>" <esc>'<i"<esc>'>$a"
-nnoremap <leader>w :execute "match ErrorMsg " . '/\v( )+$/'<cr>
-nnoremap <leader>W :execute "match None"<cr>
+"nnoremap <leader>w :execute "match ErrorMsg " . '/\v( )+$/'<cr>
+"nnoremap <leader>W :execute "match None"<cr>
+nnoremap <leader>w :w<cr>
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>p :cprevious<cr>
 nnoremap <leader>H 0w
 inoremap jk <esc>
+"}}}
+
+
+"don't do that!---------------------{{{
+nnoremap :w<cr> <nop>
+inoremap <del> <nop>
 inoremap <esc> <nop>
 "}}}
 
@@ -105,7 +115,15 @@ augroup filetype_asm
     autocmd!
     autocmd FileType asm nnoremap <buffer> <localleader>c I// <esc>
     autocmd FileType asm setlocal foldmethod=indent
-    autocmd FileType vim setlocal nospell
+augroup END
+"}}}
+
+"CU file settings ---------------------{{{
+augroup filetype_cu
+    autocmd!
+    autocmd FileType *.cu setlocal expandtab
+    autocmd FileType *.cu setlocal softtabstop=2
+    autocmd FileType *.cu setlocal shiftwidth=2
 augroup END
 "}}}
 
