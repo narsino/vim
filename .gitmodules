@@ -1,0 +1,3 @@
+[submodule "bundle/potion"]
+	path = bundle/potion
+	url = https://github.com/narsino/potion.git
