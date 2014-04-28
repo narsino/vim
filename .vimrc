@@ -1,6 +1,5 @@
 
 "Basic settings---------------------{{{
-call pathogen#infect()
 filetype on
 colorscheme default
 let mapleader = " "
@@ -14,7 +13,7 @@ set ruler
 set nu
 set wrap
 set shiftround
-set foldlevelstart=0
+set foldlevel=20
 nnoremap _ ddO<esc>pk
 inoremap <c-u> <esc>viwUea
 nnoremap <c-u> viwU 
